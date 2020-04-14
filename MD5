@@ -1,0 +1,11 @@
+a84a7f9697233fbd28a9415d2d316ae1 *DESCRIPTION
+dc640917f5b6499c32a4781dd99c82da *LICENSE
+985bf97adf4237f75df847d01adeb4ba *NAMESPACE
+d52296e35d8c7f3cfb5a7694905f7d85 *R/gotop.R
+024d11b07f8c445c4d51994a3d112b44 *README.md
+c3fab61fc99cb5c9b2ce8e8c41d5e310 *inst/htmlwidgets/jquery.gotop.js
+9b4a651b9be6ebc776de8801320b9b94 *inst/htmlwidgets/jquery.gotop.min.js
+ea2c3a2cf49168fc94bfe364a2ad5e30 *man/figures/Chevron_up_font_awesome_blue.svg
+c91815ee1ac4def69ebd693a86513285 *man/figures/logo.png
+1c8bba63b45d9db8141477d511289b46 *man/figures/logo_large.png
+3f443f64b219e6751162e3666bd93cd5 *man/use_gotop.Rd
