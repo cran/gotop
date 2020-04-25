@@ -49,22 +49,18 @@ To use it in Shiny, call `use_gotop()` inside the apps’ UI.
 library(shiny)
 library(gotop)
 
-ui <- function(){
-  fluidPage(
+shinyApp(
+  ui = fluidPage(
+    align = "center",
     use_gotop(), # add it inside the ui
-    h2("Scroll down"), 
-    HTML(rep("<br/>&darr;<br/><br/>", 20)),
-    textOutput("bottom")
-  )
-}
-
-server <- function(input, output, session){
-  output$bottom <- renderText({
-    print("Look right")
-  })
-}
-
-shinyApp(ui, server)
+    h2("Shiny with gotop"), 
+    HTML(rep("&darr;<br/><br/>scroll down<br/><br/>", 20)),
+    textOutput("lookright")
+  ),
+  server = function(input, output, session){
+    output$lookright <- renderText({ print("Look right") })
+  }
+)
 ```
 
 ## Customize it
