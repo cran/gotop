@@ -1,10 +1,17 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<!-- badges: start -->
+
 [![CRAN
 status](https://www.r-pkg.org/badges/version/gotop)](https://CRAN.R-project.org/package=gotop)
+[![Grand
+total](https://cranlogs.r-pkg.org/badges/grand-total/gotop)](https://cran.r-project.org/package=gotop)
 [![pipeline
 status](https://gitlab.com/lgnbhl/gotop/badges/master/pipeline.svg)](https://gitlab.com/lgnbhl/gotop/pipelines)
+[![R build
+status](https://github.com/lgnbhl/gotop/workflows/R-CMD-check/badge.svg)](https://github.com/lgnbhl/gotop/actions)
+<!-- badges: end -->
 
 # gotop <img src="man/figures/logo.png" align="right" />
 
@@ -65,14 +72,17 @@ shinyApp(
 
 ## Customize it
 
-You can replace the default Font Awesome icon “fas fa-chevron-up” by
-[any other Font Awesome icon](https://fontawesome.com/icons?d=gallery),
-change its color, width and much more (see arguments of `use_gotop()` ).
+You can replace the default Font Awesome chevron up icon (“fas
+fa-chevron-up”) by [any other Font Awesome
+icon](https://fontawesome.com/icons?d=gallery), change its color, width
+and much more (run `?use_gotop()` to see the documentation).
 
 ``` r
 gotop::use_gotop(
-  src = "fas fa-chevron-circle-up", 
-  color = "tomato", 
-  width = 30
+  src = "fas fa-chevron-circle-up", # css class from Font Awesome
+  color = "tomato", # color
+  opacity = 0.8, # transparency
+  width = 30, # size
+  appear = 100 # number of pixels before appearance
   )
 ```
