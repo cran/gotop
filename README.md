@@ -7,20 +7,17 @@
 status](https://www.r-pkg.org/badges/version/gotop)](https://CRAN.R-project.org/package=gotop)
 [![Grand
 total](https://cranlogs.r-pkg.org/badges/grand-total/gotop)](https://cran.r-project.org/package=gotop)
-[![pipeline
-status](https://gitlab.com/lgnbhl/gotop/badges/master/pipeline.svg)](https://gitlab.com/lgnbhl/gotop/pipelines)
-[![R build
-status](https://github.com/lgnbhl/gotop/workflows/R-CMD-check/badge.svg)](https://github.com/lgnbhl/gotop/actions)
+[![R-CMD-check](https://github.com/lgnbhl/gotop/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/lgnbhl/gotop/actions/workflows/R-CMD-check.yaml)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow-E4405F?style=social&logo=linkedin)](https://www.linkedin.com/in/FelixLuginbuhl)
 <!-- badges: end -->
 
-# gotop <img src="man/figures/logo.png" align="right" />
+# gotop <img src="man/figures/logo.png" align="right" alt="" width="130" />
 
-> Add a “scroll to top” icon to R Markdown and Shiny
+> Add a scroll back to top in R Markdown and Shiny
 
-Add a “scroll back to top” Font Awesome icon to R Markdown documents and
-Shiny using [GoTop](https://scottdorman.blog/jquery-gotop/).
+[See live demo](https://gotop.felixluginbuhl.com){.btn .btn-primary .btn role="button"}
 
-## Usage
+## Install
 
 Install the released version from CRAN.
 
@@ -36,21 +33,19 @@ install it from GitHub.
 remotes::install_github("lgnbhl/gotop")
 ```
 
-### R Markdown
+## RMarkdown
 
 To add a scroll up icon in a R Markdown document, simply add
 `use_gotop()` inside a R code chunk with `{r, echo = FALSE}` so the code
 will not be shown in the final document.
 
-``` r
-```{r, echo = FALSE}
+ ```{r, echo = FALSE}
 gotop::use_gotop()
-```
-```
+ ```
 
-### Shiny
+## Shiny
 
-To use it in Shiny, call `use_gotop()` inside the apps’ UI.
+To use it in Shiny, call `use_gotop()` inside the UI.
 
 ``` r
 library(shiny)
@@ -59,7 +54,7 @@ library(gotop)
 shinyApp(
   ui = fluidPage(
     align = "center",
-    use_gotop(), # add it inside the ui
+    use_gotop(use_cdn = FALSE), # add it inside the ui
     h2("Shiny with gotop"), 
     HTML(rep("&darr;<br/><br/>scroll down<br/><br/>", 20)),
     textOutput("lookright")

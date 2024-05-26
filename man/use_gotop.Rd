@@ -17,7 +17,8 @@ use_gotop(
   marginX = 2,
   marginY = 2,
   container = "",
-  zIndex = 9
+  zIndex = 9,
+  use_cdn = TRUE
 )
 }
 \arguments{
@@ -46,6 +47,8 @@ use_gotop(
 \item{container}{A string. The HTML element to which the scroll function will be attached. If no value is given, then the scroll function will be attched to the window.}
 
 \item{zIndex}{An integer. The z-index value.}
+
+\item{use_cdn}{boolean. TRUE to use a Content Delivery Network (CDN), true by default, or false to use locally stored files.}
 }
 \value{
 Javascript code initializing GoTop with dependencies
